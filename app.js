@@ -94,7 +94,7 @@ app.post("/login", async (req, res) => {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         httpOnly: true,
       };
-      // coz in auth.js we are expectiion req.cookies.token therefore the first args is token
+      // coz in auth.js we are expecting req.cookies.token therefore the first args is token
       res.status(200).cookie("token", token, options).json({
         success: true,
         token,
